@@ -7,7 +7,7 @@ The project demonstrates working with HTTP requests, JSON serialization, UI buil
 
 ## 🧩 API Usage
 
-The app interacts with the open REST API: https://rickandmortyapi.com/api/character
+The app interacts with the open REST API: https://rickandmortyapi.com
 
 Main steps of API interaction:
 
