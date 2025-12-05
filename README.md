@@ -1,16 +1,37 @@
-# rick_and_morty_browser
+# Rick & Morty API App
 
-A new Flutter project.
+A small Flutter application that fetches character data from the **Rick and Morty API** and displays it in a clean and simple interface.  
+The project demonstrates working with HTTP requests, JSON serialization, UI building, and screen navigation.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🧩 API Usage
 
-A few resources to get you started if this is your first Flutter project:
+The app interacts with the open REST API: https://rickandmortyapi.com/api/character
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Main steps of API interaction:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Performing HTTP GET requests.
+- Deserializing JSON into a `Character` model.
+- Displaying the list of characters in the UI.
+- Handling states: **loading**, **success**, **error**.
+- Passing model data to the details screen.
+
+---
+
+## 🧭 Navigation
+
+Navigation is implemented using Flutter’s standard navigation tools:
+
+- **HomeScreen** — displays the list of characters.
+- **CharacterDetailsScreen** — shows detailed information about a selected character.
+
+Screen transitions are handled with:
+
+```dart
+Navigator.push(
+  context,
+  MaterialPageRoute(
+    builder: (_) => CharacterDetails(character: character),
+  ),
+);
